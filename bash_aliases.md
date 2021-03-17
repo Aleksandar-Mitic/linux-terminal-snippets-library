@@ -1,34 +1,47 @@
 # LIST OF MY BASH ALIASES
 *Do not forget after adding new aliases to run command: . ~/.bashrc*
 
-A bash alias has the following structure:
+    #A bash alias has the following structure:
+        alias [alias_name]="[command_to_alias]"
 
-    alias [alias_name]="[command_to_alias]"
+    #Open file manager here
+        alias openfilemanager='xdg-open .'
 
-Open file manager here
+    #Make grep more user friendly by highlighting matches and exclude grepping through .svn folders.
+        alias grep='grep --color=auto --exclude-dir=\.svn'
 
-    alias openfilemanager='xdg-open .'
+    #if user is not root, pass all commands via sudo
+        if [ $UID -ne 0 ]; then
+            alias reboot='sudo reboot'
+            alias updatesystem='sudo apt-get update && sudo apt-get upgrade'
+        fi
 
-Make grep more user friendly by highlighting matches
-and exclude grepping through .svn folders.
+    #Show open ports
+        alias ports='netstat -tulanp'
 
-    alias grep='grep --color=auto --exclude-dir=\.svn'
+    #Unpack pack zip etc commands
+        alias untar='tar -zxvf '
 
-if user is not root, pass all commands via sudo
+    #Need to know your local IP address?
+        alias myip='ip addr show'
 
-    if [ $UID -ne 0 ]; then
-        alias reboot='sudo reboot'
-        alias updatesystem='sudo apt-get update && sudo apt-get upgrade'
-    fi
+    #Reload web servers
+        alias nginxreload='sudo /usr/local/nginx/sbin/nginx -s reload'
+        alias nginxtest='sudo /usr/local/nginx/sbin/nginx -t'
+        alias lightyload='sudo /etc/init.d/lighttpd reload'
+        alias lightytest='sudo /usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf -t'
+        alias apachereload='sudo /usr/sbin/apachectl -k graceful'
+        alias apachetest='sudo /usr/sbin/apachectl -t && /usr/sbin/apachectl -t -D DUMP_VHOSTS'
 
-Show open ports
+    #Which apache sites are enabled?
+        alias sites-enabled="apachectl -S"
 
-    alias ports='netstat -tulanp'
+    # Laravel shortcuts
+        alias art="php artisan"
+        alias mfs="php artisan migrate:fresh --seed"
+        alias migrate="php artisan migrate"
+        alias dev='cd /var/www/'
+        alias createshortcut="ln -s $PWD ~/Desktop/"
 
-Unpack pack zip etc commands
-
-    alias untar='tar -zxvf '
-
-Need to know your local IP address?
-
-    alias myip='ip addr show'
+    # Dev shortcut
+        alias dev='cd /var/www/'
