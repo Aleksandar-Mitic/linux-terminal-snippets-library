@@ -75,6 +75,27 @@ Index
     git push --set-upstream origin main
 
 
+## Create new repo from an existing project
+
+##### Say you’ve got an existing project that you want to start tracking with git.
+
+    Go into the directory containing the project.
+    $ git init.
+
+    $ touch .gitignore
+    Add ignored files and folders
+
+    $ git add .
+
+    $ git commit.
+
+##### Go to github.
+    Log in to your account.
+    Click the new repository button in the top-right.
+    Click the “Create repository” button.
+
+    $ git remote add origin git@github.com:username/new_repo
+    $ git push -u origin master
 
 ## Contribute to an existing branch on GitHub
 
