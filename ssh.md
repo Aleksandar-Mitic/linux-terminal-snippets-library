@@ -28,4 +28,6 @@ TODO:
 Setup SSH Passwordless Login
 [ https://linuxize.com/post/how-to-setup-passwordless-ssh-login/ ]
 
+    chmod 700 ∼/.ssh && chmod 600 ∼/.ssh/authorized_keys
+
 
