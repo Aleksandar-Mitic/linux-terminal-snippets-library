@@ -75,6 +75,7 @@ found on the Composer [Public Keys / Signatures page](https://composer.github.io
     # To test your installation, run:
     composer
 
+
 ###Install phpMyAdmin
 
 Download the latest phpMyAdmin archive from the official [download](https://www.phpmyadmin.net/downloads/) page
