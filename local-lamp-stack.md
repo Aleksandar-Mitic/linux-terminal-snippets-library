@@ -45,6 +45,12 @@ After you checked the latest version download package.
     sudo mysql  # or mysql -h localhost -u root -p
     SET GLOBAL validate_password.policy=LOW;
 
+    #Here is what I do to remove the validate password plugin:
+
+    #Login to the mysql server as root mysql -h localhost -u root -p
+    #Run the following sql command: uninstall plugin validate_password;
+    #If last line doesn't work (new mysql release), you should execute UNINSTALL COMPONENT 'file://component_validate_password';
+
     # For a local dev environment I skip the 'Validate Password Plugin'.
     # You will be asked to enter a password for the root user.
     # From there remove the anonymous users, disallow the root user from remote access, and remove the test database.
@@ -60,7 +66,6 @@ Create a non-root user with root privileges
     mysql> exit
 
     mysql -u admin -p
-
 
     sudo service mysql status
 
