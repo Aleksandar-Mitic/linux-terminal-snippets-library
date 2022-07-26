@@ -36,6 +36,15 @@ After you checked the latest version download package.
     # Secure installation
     sudo mysql_secure_installation 
 
+    # If error is ocurred during setup root password this is the fix 1
+    sudo mysql
+    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'mynewpassword';
+    sudo mysql_secure_installation
+
+    #if there is error "ERROR 1819 (HY000): Your password does not satisfy the current policy requirements"
+    sudo mysql  # or mysql -h localhost -u root -p
+    SET GLOBAL validate_password.policy=LOW;
+
     # For a local dev environment I skip the 'Validate Password Plugin'.
     # You will be asked to enter a password for the root user.
     # From there remove the anonymous users, disallow the root user from remote access, and remove the test database.
