@@ -28,7 +28,7 @@
 
     #Apache
         alias sites-enabled="apachectl -S"
-        alias scd-sites-enabled="cd /etc/apache2/sites-enabled"
+        alias cd-sites-enabled="cd /etc/apache2/sites-enabled"
 
         alias apachereload='sudo /usr/sbin/apachectl -k graceful'
         alias apachetest='sudo /usr/sbin/apachectl -t && /usr/sbin/apachectl -t -D DUMP_VHOSTS'
