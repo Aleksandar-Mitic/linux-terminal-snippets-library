@@ -43,6 +43,10 @@
     # Dev shortcut
         alias dev='cd /var/www/'
 
+    #PHP
+        alias php-config='sudo subl /etc/php/8.0/apache2/php.ini'
+        alias cd-php-config='cd /etc/php/8.0/apache2/php.ini'
+
     # MySql
         alias mysql-cnf="/usr/sbin/mysqld --verbose --help"
         alias mysql-config="/usr/sbin/mysqld --verbose --help"

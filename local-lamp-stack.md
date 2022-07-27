@@ -14,6 +14,13 @@ Install PHP basic modules
 
     sudo apt install php8.0 php8.0-common php8.0-json php8.0-mysql libapache2-mod-php8.0 php8.0-odbc php8.0-readline php8.0-sqlite3 php8.0-xsl php8.0-apcu php8.0-curl php8.0-opcache php8.0-redis php8.0-mbstring php8.0-tidy php8.0-yaml php8.0-bcmath php8.0-dev php8.0-imagick php8.0-memcached php8.0-uuid php8.0-zip php8.0-xdebug php8.0-cgi php8.0-psr php8.0-soap php8.0-cli php8.0-intl php8.0-oauth php8.0-xml
 
+
+Change the following variables in php.ini
+
+    memory_limit = 1000M - Set memory limit to what is available on the system
+    post_max_size = 4G - Ensure that this value is greater or equal to the upload_max_filesize value
+    upload_max_filesize = 4G - Set this to whatever you want the maximum to be
+
 ### Install Apache
 
     sudo apt install apache2
