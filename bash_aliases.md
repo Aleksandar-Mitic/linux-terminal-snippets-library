@@ -52,6 +52,10 @@
 
         alias mysql-status="systemctl status mysql.service"
 
+    #Edit Hosts
+        alias edit-hosts="sudo subl /etc/hosts"
+        alias view-hosts="cat /etc/hosts"
+
     # get rid of command not found
         alias cd..='cd ..'
 
