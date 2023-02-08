@@ -12,7 +12,7 @@ Verify the PHP version installed
 
 Install PHP basic modules
 
-    sudo apt install php8.0 php8.0-common php8.0-json php8.0-mysql libapache2-mod-php8.0 php8.0-odbc php8.0-readline php8.0-sqlite3 php8.0-xsl php8.0-apcu php8.0-curl php8.0-opcache php8.0-redis php8.0-mbstring php8.0-tidy php8.0-yaml php8.0-bcmath php8.0-dev php8.0-imagick php8.0-memcached php8.0-uuid php8.0-zip php8.0-xdebug php8.0-cgi php8.0-psr php8.0-soap php8.0-cli php8.0-intl php8.0-oauth php8.0-xml
+    sudo apt install php8.0 php8.0-common php8.0-mysql libapache2-mod-php8.0 php8.0-odbc php8.0-readline php8.0-sqlite3 php8.0-xsl php8.0-apcu php8.0-curl php8.0-opcache php8.0-redis php8.0-mbstring php8.0-tidy php8.0-yaml php8.0-bcmath php8.0-dev php8.0-imagick php8.0-memcached php8.0-uuid php8.0-zip php8.0-xdebug php8.0-cgi php8.0-psr php8.0-soap php8.0-cli php8.0-intl php8.0-oauth php8.0-xml
 
 
 Change the following variables in php.ini
@@ -91,7 +91,7 @@ found on the Composer [Public Keys / Signatures page](https://composer.github.io
 
     php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
     # To install composer globally, use the following command which will download and install Composer as a system-wide command named composer, under /usr/local/bin:
-    sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+    sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
     
     # To test your installation, run:
     composer
