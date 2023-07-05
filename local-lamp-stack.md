@@ -21,6 +21,12 @@ Change the following variables in php.ini
     post_max_size = 4G - Ensure that this value is greater or equal to the upload_max_filesize value
     upload_max_filesize = 4G - Set this to whatever you want the maximum to be
 
+### Switch PHP version
+    sudo update-alternatives --config php
+    sudo a2dismod php8.0
+    sudo a2enmod php8.1
+    sudo service apache2 restart
+
 ### Install Apache
 
     sudo apt install apache2
