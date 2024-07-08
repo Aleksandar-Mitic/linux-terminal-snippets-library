@@ -69,6 +69,9 @@
         alias mysql-config-location="/usr/sbin/mysqld --verbose --help | grep -A 1 \"Default options\""
 
         alias mysql-status="systemctl status mysql.service"
+        alias mysql-restart="systemctl restart mysql.service"
+        alias mysql-stop="systemctl stop mysql.service"
+        alias mysql-start="systemctl start mysql.service"
 
     # Laravel shortcuts
         alias art="php artisan"
