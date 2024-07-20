@@ -79,7 +79,7 @@
         alias pp-mfs="php artisan db:wipe --database pp-metrics && php artisan db:wipe --database pp-advertising && php artisan migrate:fresh --seed"
         alias migrate="php artisan migrate"
         alias dev='cd /var/www/'
-
+        alias pint='./vendor/bin/pint'
         alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
     # Dev shortcut
