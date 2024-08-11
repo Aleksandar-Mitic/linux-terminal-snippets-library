@@ -142,11 +142,9 @@ Download the latest phpMyAdmin archive from the official [download](https://www.
 
 Configure Apache web Server
 
-    sudo nano /etc/apache/conf-available/phpmyadmin.conf
+    sudo subl /etc/apache2/conf-available/phpmyadmin.conf
 
 ``` apacheconf
-Alias /phpmyadmin /usr/share/phpmyadmin
-Alias /phpMyAdmin /usr/share/phpmyadmin
 
 <Directory /usr/share/phpmyadmin/>
    AddDefaultCharset UTF-8
