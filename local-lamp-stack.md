@@ -123,6 +123,29 @@ found on the Composer [Public Keys / Signatures page](https://composer.github.io
 
 ### Install phpMyAdmin
 
+New installation: https://www.howtoforge.com/phpmyadmin-installation-on-ubuntu-24-04/
+
+    sudo apt install phpmyadmin
+    sudo a2enmod rewrite
+    sudo subl /etc/phpmyadmin/apache.conf
+
+Add the option 'AllowOverride All' to the phpMyAdmin directive '<Directory /usr/share/phpmyadmin>...<Directory>'. This allows you to override this directive configuration via the .htaccess file.
+
+    <Directory /usr/share/phpmyadmin>
+        ...
+        ...
+        AllowOverride All
+        ...
+        ...
+    <Directory>
+
+
+    sudo systemctl restart apache2
+
+
+    http://127.0.0.1/phpmyadmin/index.php
+
+    
 Download the latest phpMyAdmin archive from the official [download](https://www.phpmyadmin.net/downloads/) page
 
     DATA="$(wget https://www.phpmyadmin.net/home_page/version.txt -q -O-)"
