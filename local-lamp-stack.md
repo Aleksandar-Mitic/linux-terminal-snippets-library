@@ -37,6 +37,24 @@ Check if Apache is running
     sudo systemctl status apache2
 
 ### Install specific MySQL version
+
+New Ubuntu install.
+
+    sudo apt install mysql-server -y
+
+    mysql --version
+
+    sudo systemctl status mysql
+
+    sudo mysql_secure_installation
+
+    sudo systemctl restart mysqld
+
+    sudo mysql -u root -p
+
+    mysql> CREATE USER 'my_user'@'localhost' IDENTIFIED BY 'my_password';
+
+
 First, load the MySQL download page [ https://dev.mysql.com/downloads/repo/apt/ ] in your web browser.
 After you checked the latest version download package.
 
