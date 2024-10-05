@@ -121,4 +121,4 @@
         alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 
     # Get website data
-        wget -m -k -K -E https://somewebsite.com
+        alias downloadwebsite='function _wget(){ read -p "Enter the URL: " url; wget -m -k -K -E "$url"; }; _wget'
