@@ -81,6 +81,9 @@
         alias dev='cd /var/www/'
         alias pint='./vendor/bin/pint'
         alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+    alias opt='php artisan config:cache
+                php artisan route:cache
+                php artisan event:cache'
 
     # Dev shortcut
         alias dev='cd /var/www/'
